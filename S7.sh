@@ -70,3 +70,16 @@ for i in {1..50}; do
     echo "Error folder $i"
   fi
 done
+
+#Combine CSV file from 50 directories into 1 file
+
+outlet1_output="outlet1_combined.csv"
+outlet2_output="outlet2_combined.csv"
+
+> "$outlet1_output"
+> "$outlet2_output"
+
+for i in {1..50}; do
+  tail -n +2 "$i/outlet1_integrated.csv" >> "$outlet1_output"
+  tail -n +2 "$i/outlet2_integrated.csv" >> "$outlet2_output"
+done

@@ -1,1 +1,25 @@
+Step 01 to 04 explains simple preprocessing
 
+Step 01: Create directories for the number of present cases (in our case, we have 50) using bash S1.sh command on the terminal. 
+Step 02: Set up directory 01 with necessary OpenFOAM files (i.e 0, constant, system, U, p, polyMesh etc.) without the mesh files and copy that directory to all directories using bash S2.sh command
+Step 03: Rename all your mesh files in chronological order (i.e. 1 to 50) and copy the mesh files from base directory to their destination folder using S3.sh script.
+Step 04: Set up fluentMeshToFoam command for all directories in chronological order using S4.sh command.
+
+
+Step 04 to 06 explains running automated simpleFoam solver
+
+Step05: By now, you should be able to write a simple loop for copying and moving directories. Copy S5 script to all the desired directories. Modify np (number of CPUs) according to your system requirement.
+Step06: Run the S6.sh script. This will create the polyMesh folder and initiate the simpleFoam solver for all directories. Now we have successfully completed automated running our CFD simulations for the fluid phase.
+
+Step 07 explains post processing of the simpleFoam solver
+
+Step07: Create python script files and execute for all directories using S7.sh for postprocessing. The user can easily generate the python scripts from the "trace" function from paraview according to their workflow and modify the S7.sh script. The script also combines the CSV files generated from paraview from all the directories into one single file.
+
+Step 08 
+
+Step08: Set up directories for the particleFoam solver following steps 01 to 04.
+Setp09: Export velocity vector from the solved simpleFoam directory to the particleFoam directory using S8.sh script. (Modify the path according to user specifications. Note that the openfoam path usually remains same for different versions)
+Step09: Run the solver with S9.sh script
+Step10: Save desired results from the log files for any given time step using any method you prefer. (Note: for paraview application, the log file is not necessary)
+
+End

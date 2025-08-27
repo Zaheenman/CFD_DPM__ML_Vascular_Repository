@@ -1,0 +1,28 @@
+#Create Directory 
+for i in {1..50}
+do
+  mkdir "$i"
+done
+
+
+#Copy the base directory with a set up case 
+for i in {1..50}
+do
+  if [ "$i" -ne 1 ]; then
+    cp -r 1/* "$i"/
+  fi
+done
+
+
+#Copy mesh files to directories (rename mesh files from 1 to 50)
+for i in {1..50};
+do
+    mv "$i.msh" "$i/"
+done
+
+
+#Set up fluentMeshToFoam command for 1 to 50 mesh files
+for i in {1..50}
+do
+  echo "fluentMeshToFoam ${i}.msh"
+done

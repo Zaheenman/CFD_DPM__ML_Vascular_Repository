@@ -1,4 +1,6 @@
-# CFD_DPM__ML_Vascular_Repository
-The step by step process for using the shell scripts for automated OpenFOAM CFD-DPM simulation are as follows:
+OpenFOAM is a popular Computational Fluid Dynamics (CFD) framework for a wide range of physics simulations. Here, we represent a methodology for automated OpenFOAM simulations for the simpleFoam coupled with particleFoam solver. Bulk amount of simulations can be carried out in OpenFOAM with shell scripting in linux terminal, particularly if the user has access to high performance computing (HPC) resources. One important note is the mesh in our case was generated from ANYSYS Fluent, thus we use the fluentMeshToFoam command for creating the polyMesh directory. A step by step process is explained in the following section for acheiving full automation.
 
-1. 
+Step 01:
+Create directories 
+
+

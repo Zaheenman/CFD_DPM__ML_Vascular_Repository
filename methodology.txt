@@ -15,7 +15,7 @@ Step 07 explains post processing of the simpleFoam solver
 
 Step07: Create python script files and execute for all directories using S7.sh for postprocessing. The user can easily generate the python scripts from the "trace" function from paraview according to their workflow and modify the S7.sh script. The script also combines the CSV files generated from paraview from all the directories into one single file.
 
-Step 08 
+Step 08 explains particleFoam solver workflow (Note particleFoam has been replaced with denseParticleFoam solver for later OpenFOAM releases)
 
 Step08: Set up directories for the particleFoam solver following steps 01 to 04.
 Setp09: Export velocity vector from the solved simpleFoam directory to the particleFoam directory using S8.sh script. (Modify the path according to user specifications. Note that the openfoam path usually remains same for different versions)
